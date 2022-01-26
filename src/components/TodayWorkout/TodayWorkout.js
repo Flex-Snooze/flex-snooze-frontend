@@ -1,14 +1,28 @@
-import React from 'react';
+import './TodayWorkout.css';
+import React, { useState, useContext } from 'react';
+import { WorkoutContext } from '../../workoutContext';
+import { Route, Routes, Link } from 'react-router-dom';
 import CreateWorkout from '../CreateWorkout/CreateWorkout';
 
 function TodayWorkout(props) {
-    return (
-        <div>
-            Today workout
-            this will have the choice to select workout type of push/pull/leg/yoga
-            should have buttons that will link to create workout, incorporating state (PULL to be featured at the top of the next page, for example)
-        </div>
-    );
+	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
+
+	return (
+		<div className='todayWorkoutContainer'>
+			<div className='todayWorkoutSelection'>
+				<h2>Get Today's Workout</h2>
+				<Link to={'/selectworkout'}>
+					<button>Lifts</button>
+				</Link>
+				<Link to={'/selectworkout'}>
+					<button>Yoga</button>
+				</Link>
+				<Link to={'/createworkout'}>
+					<button>Custom Workout</button>
+				</Link>
+			</div>
+		</div>
+	);
 }
 
 export default TodayWorkout;

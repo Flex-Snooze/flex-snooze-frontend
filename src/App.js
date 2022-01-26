@@ -8,7 +8,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import TodayWorkout from './components/TodayWorkout/TodayWorkout';
 import About from './components/About/About';
 import SelectWorkout from './components/SelectWorkout/SelectWorkout';
-import ModifyWorkout from './components/ModifyWorkout/ModifyWorkout';
+
 import CreateWorkout from './components/CreateWorkout/CreateWorkout';
 
 function App() {

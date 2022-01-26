@@ -1,4 +1,4 @@
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import { WorkoutContext } from '../src/workoutContext';
 
@@ -8,8 +8,6 @@ import Dashboard from './components/Dashboard/Dashboard';
 import TodayWorkout from './components/TodayWorkout/TodayWorkout';
 import About from './components/About/About';
 import SelectWorkout from './components/SelectWorkout/SelectWorkout';
-
-import CreateWorkout from './components/CreateWorkout/CreateWorkout';
 
 function App() {
 	const [todayWorkout, setTodayWorkout] = useState('Lifts');

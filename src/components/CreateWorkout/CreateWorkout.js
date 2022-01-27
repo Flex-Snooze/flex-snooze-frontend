@@ -59,18 +59,7 @@ function CreateWorkout(props) {
 					onChange={handleChange}
 					value={formState.date}
 				/>
-				{/* <label htmlFor='starttimefield'>Start Time:</label> */}
-				{/* <input type='time' id='timeFieldStart' />
-				<label htmlFor='endtimefield'> End Time:</label>
-				<input type='time' id='timeFieldEnd' /> */}
-				{/* <label htmlFor='excercisetype'>Excercise Type:</label> */}
-				{/* <select id='excerciseType'>
-					<option value='push'>Push</option>
-					<option value='pull'>Pull</option>
-					<option value='legs'>Legs</option>
-					<option value='yoga'>Yoga</option>
-					<option value='custom'>Other</option>
-				</select> */}
+
 				<label htmlFor='exercises'>Workout Notes:</label>
 				<textarea
 					id='exercises'

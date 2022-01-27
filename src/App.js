@@ -37,12 +37,10 @@ function App() {
 				value={{
 					todayWorkout,
 					setTodayWorkout,
-					selectWorkout,
-					setSelectWorkout,
-					customWorkout,
-					setCustomWorkout,
 					finalWorkout,
 					setFinalWorkout,
+					userWorkoutData,
+					setUserWorkoutData
 				}}>
 				<Nav />
 				<Routes>

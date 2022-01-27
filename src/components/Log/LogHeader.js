@@ -6,17 +6,18 @@ function LogHeader(props) {
 
 	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
 	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
-	let userWorkouts
-	// useEffect(() => {
-	// 	fetch('http://localhost:4000/api/user/5')
-	// 		.then((res) => res.json())
-	// 		.then((json) => {
-	// 			// setFinalWorkout(json);
-	// 			console.log(json);
+	const { userWorkoutData, setUserWorkoutData } = useContext(WorkoutContext);
 
-	// 		})
-	// 		.catch(console.error);
-	// }, []);
+	useEffect(() => {
+		fetch('http://localhost:4000/api/user/5')
+			.then((res) => res.json())
+			.then((json) => {
+				// setFinalWorkout(json);
+				console.log(json);
+
+			})
+			.catch(console.error);
+	}, []);
 
 	return (
 	<div>hello from Logheader</div>

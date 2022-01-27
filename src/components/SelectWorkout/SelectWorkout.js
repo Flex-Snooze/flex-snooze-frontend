@@ -10,17 +10,17 @@ function SelectWorkout(props) {
 	const { finalWorkout, setFinalWorkout} = useContext(WorkoutContext);;
 
 
-	useEffect(() => {
-		fetch('http://localhost:4000/api/workout')
-			.then((res) => res.json())
-			.then((json) => {
-				setFinalWorkout(json);
-				console.log(finalWorkout[1]);
+	// useEffect(() => {
+	// 	fetch('http://localhost:4000/api/user/5')
+	// 		.then((res) => res.json())
+	// 		.then((json) => {
+	// 			setFinalWorkout(json);
+	// 			console.log(finalWorkout);
 
-				console.log(`this is state ${todayWorkout}`)
-			})
-			.catch(console.error);
-	}, []);
+	// 			console.log(`this is state ${todayWorkout}`)
+	// 		})
+	// 		.catch(console.error);
+	// }, []);
 
 
 
@@ -28,15 +28,15 @@ function SelectWorkout(props) {
 		<div className='selectWorkoutContainer'>
 			<div className='workoutTypeContainer'>
 				<h2> Today's {todayWorkout} Workout: </h2>
-				<div>{finalWorkout[1].exercises[0]}</div>
+				<div>1</div>
 				<button className='next-btn'>Next Excercise</button>
-				<div>{finalWorkout[1].exercises[1]}</div>{' '}
+				<div>2</div>{' '}
 				<button className='next-btn'>Next Excercise</button>
-				<div>{finalWorkout[1].exercises[2]}</div>
+				<div>3</div>
 				<button className='next-btn'>Next Excercise</button>
-				<div>{finalWorkout[1].exercises[3]}</div>
+				<div>4</div>
 				<button className='next-btn'>Next Excercise</button>
-				<div>{finalWorkout[1].exercises[4]}</div>
+				<div>5</div>
 				<button className='next-btn'>Next Excercise</button>
 				<button className='ok-btn'>Let's Go</button>
 			</div>

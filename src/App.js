@@ -11,10 +11,25 @@ import SelectWorkout from './components/SelectWorkout/SelectWorkout';
 import CreateWorkout from './components/CreateWorkout/CreateWorkout';
 
 function App() {
-	const [todayWorkout, setTodayWorkout] = useState("push");
-	const [selectWorkout, setSelectWorkout] = useState();
-	const [customWorkout, setCustomWorkout] = useState();
-	const [finalWorkout, setFinalWorkout] = useState(['pull up', 'bentover row']);
+	const [todayWorkout, setTodayWorkout] = useState("Push");
+	const [finalWorkout, setFinalWorkout] = useState([
+		'Bench Press',
+		'Overhead Press',
+		'Dumbbell Lateral Raises',
+		'Tricep Pushdown',
+		'Incline Dumbbell Press',
+	]);
+	const [userWorkoutData, setUserWorkoutData] = useState({
+			name: "Yoga",
+			exercises: [
+			"Child's",
+			"Child's",
+			"Child's",
+			"Child's",
+			"Child's"
+			],
+			date: "1-5-22"
+			})
 
 	return (
 		<div>

@@ -11,7 +11,8 @@ import SelectWorkout from './components/SelectWorkout/SelectWorkout';
 import CreateWorkout from './components/CreateWorkout/CreateWorkout';
 
 function App() {
-	const [todayWorkout, setTodayWorkout] = useState("Push");
+	const [todayWorkout, setTodayWorkout] = useState('Push');
+	const [logId, setLogId] = useState(-1);
 	const [finalWorkout, setFinalWorkout] = useState([
 		'Bench Press',
 		'Overhead Press',
@@ -19,17 +20,7 @@ function App() {
 		'Tricep Pushdown',
 		'Incline Dumbbell Press',
 	]);
-	const [userWorkoutData, setUserWorkoutData] = useState({
-			name: "Yoga",
-			exercises: [
-			"Child's",
-			"Child's",
-			"Child's",
-			"Child's",
-			"Child's"
-			],
-			date: "1-5-22"
-			})
+	const [userWorkoutData, setUserWorkoutData] = useState([{}]);
 
 	return (
 		<div>
@@ -40,7 +31,9 @@ function App() {
 					finalWorkout,
 					setFinalWorkout,
 					userWorkoutData,
-					setUserWorkoutData
+					setUserWorkoutData,
+					logId,
+					setLogId,
 				}}>
 				<Nav />
 				<Routes>

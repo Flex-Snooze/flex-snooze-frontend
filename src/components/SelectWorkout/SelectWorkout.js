@@ -1,11 +1,18 @@
 import './SelectWorkout.css';
 import React from 'react';
+import {useContext} from 'react'
+import { WorkoutContext } from '../../workoutContext';
+
 
 function SelectWorkout(props) {
+
+	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
+	const { finalWorkout, setFinalWorkout} = useContext(WorkoutContext);;
+
 	return (
-		<div classname='selectWorkoutContainer'>
+		<div className='selectWorkoutContainer'>
 			<div className='workoutTypeContainer'>
-				<h2> Today's Selected Workout:</h2>
+				<h2> Today's {todayWorkout} Workout: </h2>
 				<div>Workout 1</div>
 				<button className='next-btn'>Next Excercise</button>
 				<div>Workout 2</div>{' '}

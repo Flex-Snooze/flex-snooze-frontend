@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { useContext, useState } from 'react';
+import { WorkoutContext } from '../../workoutContext';
+    
 function Log(props) {
-    return (
-        <div>
-            hello from Log
-        </div>
-    );
+	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
+
+	return <div>hello from Log</div>;
 }
 
 export default Log;

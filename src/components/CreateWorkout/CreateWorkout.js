@@ -1,11 +1,14 @@
 import React from 'react';
+import { useContext } from 'react';
+import { WorkoutContext } from '../../workoutContext';
+
 
 function CreateWorkout(props) {
-    return (
-        <div>
-            hellow from createworkout
-            this page should be set in a form
-        </div>
+	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
+	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
+
+	return (
+        <div>{todayWorkout}</div>
     );
 }
 

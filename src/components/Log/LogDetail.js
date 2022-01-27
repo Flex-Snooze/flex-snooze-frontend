@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Log(props) {
+function LogDetail(props) {
     return (
         <div>
-            hello from Log
+            log detail
         </div>
     );
 }
 
-export default Log;
+export default LogDetail;

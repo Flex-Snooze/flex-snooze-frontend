@@ -1,15 +1,18 @@
 import React from 'react'; 
-import Log from '../Log/Log';
+import LogDetail from '../Log/LogDetail';
+import LogHeader from '../Log/LogHeader';
 import UserData from '../UserData/UserData';
 
 function Dashboard(props) {
-    return (
-        <div>
-            Hello from Dashboard
-            <UserData />
-            <Log />
-        </div>
-    );
+
+	return (
+		<div>
+			<h2>Your Dashboard</h2>
+			<UserData />
+			<LogHeader/>
+			<LogDetail/>
+		</div>
+	);
 }
 
 export default Dashboard;

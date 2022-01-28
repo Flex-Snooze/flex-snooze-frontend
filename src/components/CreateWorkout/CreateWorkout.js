@@ -19,8 +19,7 @@ function CreateWorkout(props) {
 		console.log(formState);
 
 		axios
-			.post('http://localhost:4000/api/user/5', {
-
+			.post('https://flex-five.herokuapp.com/api/user/5', {
 				...formState,
 
 			})

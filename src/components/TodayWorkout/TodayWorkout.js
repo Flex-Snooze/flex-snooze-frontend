@@ -39,7 +39,7 @@ function TodayWorkout(props) {
 
 	async function getWorkout() {
 		try {
-			const res = await axios.get(`http://localhost:4000/api/user/5`);
+			const res = await axios.get(`https://flex-five.herokuapp.com/api/user/5`);
 			resData = res.data.workouts;
 			console.log(resData, 'resData');
 			return resData;
@@ -74,7 +74,10 @@ function TodayWorkout(props) {
 					</button>
 				</Link>
 				<Link to={'/createworkout'}>
-					<button className='workout-select' id='customBtn' onClick={handleClick}>
+					<button
+						className='workout-select'
+						id='customBtn'
+						onClick={handleClick}>
 						Custom Workout
 					</button>
 				</Link>

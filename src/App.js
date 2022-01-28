@@ -17,7 +17,7 @@ function App() {
 	const [userWorkoutData, setUserWorkoutData] = useState([{}]);
 
 	return (
-		<div>
+		<div className='App'>
 			<WorkoutContext.Provider
 				value={{
 					todayWorkout,
@@ -29,6 +29,7 @@ function App() {
 					logId,
 					setLogId,
 				}}>
+					<h1>Flex Five</h1>
 				<Nav />
 				<Routes>
 					<Route path='/' element={<TodayWorkout />} />

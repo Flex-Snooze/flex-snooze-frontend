@@ -1,8 +1,9 @@
 .dashboard__div {
     display: grid;
+    height: 60vh;
     border: 2px purple solid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr .5fr 3fr;
+    grid-template-rows: .2fr .2fr 3fr;
 }
 
 .dashboard__h2 {

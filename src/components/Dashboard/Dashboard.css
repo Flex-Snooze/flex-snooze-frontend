@@ -2,7 +2,7 @@
     display: grid;
     border: 2px purple solid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr .5fr 8fr;
+    grid-template-rows: 1fr .5fr 3fr;
 }
 
 .dashboard__h2 {

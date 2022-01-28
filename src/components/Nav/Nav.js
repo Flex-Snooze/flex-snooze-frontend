@@ -7,13 +7,13 @@ function Nav(props) {
 		<nav>
 			<ul className='nav__ul'>
 				<Link to={'/mydashboard'}>
-					<li className='header-nav'>My Dashboard </li>
+					<li className='nav__li'>My Dashboard </li>
 				</Link>
 				<Link to={'/'}>
-					<li className='header-nav'>Get a Workout</li>
+					<li className='nav__li'>Get a Workout</li>
 				</Link>
 				<Link to={'/about'}>
-					<li className='header-nav'>About</li>
+					<li className='nav__li'>About</li>
 				</Link>
 			</ul>
 		</nav>

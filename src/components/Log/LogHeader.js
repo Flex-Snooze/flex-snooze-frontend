@@ -11,7 +11,7 @@ function LogHeader(props) {
 
 	async function getLog() {
 		try {
-			const res = await axios.get(`http://localhost:4000/api/user/5`);
+			const res = await axios.get(`https://flex-five.herokuapp.com/api/user/5`);
 			setUserWorkoutData(res.data.log);
 			console.log(res.data.log);
 			console.log(userWorkoutData, 'user log');

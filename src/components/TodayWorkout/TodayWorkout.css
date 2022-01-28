@@ -31,9 +31,13 @@ a {
 	color: #0d8494;
 	font-size: 18px;
 	/* text-shadow: 1px 0px rgb(54 65 62 / 90%); */
-	background: -webkit-linear-gradient(right, rgb(25, 184, 184), rgb(3, 91, 107));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(
+		right,
+		rgb(37, 98, 121),
+		rgb(55, 124, 141)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .workout-select {

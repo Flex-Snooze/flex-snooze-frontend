@@ -1,7 +1,7 @@
 import './TodayWorkout.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { WorkoutContext } from '../../workoutContext';
 import axios from 'axios';
 
@@ -54,27 +54,27 @@ function TodayWorkout(props) {
 			<div className='todayWorkoutSelection'>
 				<h2>Get Today's Workout</h2>
 				<Link to={'/selectworkout'}>
-					<button id='pushBtn' onClick={handleClick}>
+					<button className='workout-select' id='pushBtn' onClick={handleClick}>
 						Push
 					</button>
 				</Link>
 				<Link to={'/selectworkout'}>
-					<button id='pullBtn' onClick={handleClick}>
+					<button className='workout-select' id='pullBtn' onClick={handleClick}>
 						Pull
 					</button>
 				</Link>
 				<Link to={'/selectworkout'}>
-					<button id='legsBtn' onClick={handleClick}>
+					<button className='workout-select' id='legsBtn' onClick={handleClick}>
 						Legs
 					</button>
 				</Link>
 				<Link to={'/selectworkout'}>
-					<button id='yogaBtn' onClick={handleClick}>
+					<button className='workout-select' id='yogaBtn' onClick={handleClick}>
 						Yoga
 					</button>
 				</Link>
 				<Link to={'/createworkout'}>
-					<button id='customBtn' onClick={handleClick}>
+					<button className='workout-select' id='customBtn' onClick={handleClick}>
 						Custom Workout
 					</button>
 				</Link>

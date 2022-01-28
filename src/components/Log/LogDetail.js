@@ -8,6 +8,7 @@ function LogDetail(props) {
 	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
 	const { userWorkoutData, setUserWorkoutData } = useContext(WorkoutContext);
 	const { logId, setLogId } = useContext(WorkoutContext);
+
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {

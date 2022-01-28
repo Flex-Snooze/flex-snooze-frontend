@@ -75,7 +75,6 @@ function SelectWorkout(props) {
 		return () => clearTimeout(handleLoadingTimeOut);
 	}, []);
 
-
 	const changeText1 = () => {
 		setButtonText1(remainingWorkout[counter]);
 		setCounter((counter + 1) % remainingWorkout.length);

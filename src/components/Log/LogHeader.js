@@ -60,11 +60,3 @@ function LogHeader(props) {
 }
 
 export default LogHeader;
-
-///////PSUEDOCODE//////////
-
-//make the api call to retrieve all workout information
-//save to state
-//map over the variable to create buttons with the date and type of workout
-//create a function for onclick to render detailed data in the LogDetail component
-// use state to grab the button click by idx id and render on LogDetail comp

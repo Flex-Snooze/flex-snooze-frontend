@@ -46,7 +46,7 @@ function SelectWorkout(props) {
 		}
 	}
 	const workoutData = {
-		name: { todayWorkout },
+		name:  todayWorkout,
 		exercises: [
 			`${buttonText1}`,
 			`${buttonText2}`,
@@ -74,6 +74,8 @@ function SelectWorkout(props) {
 		getWorkout();
 		return () => clearTimeout(handleLoadingTimeOut);
 	}, []);
+
+
 	const changeText1 = () => {
 		setButtonText1(remainingWorkout[counter]);
 		setCounter((counter + 1) % remainingWorkout.length);
@@ -109,11 +111,12 @@ function SelectWorkout(props) {
 		<div className='selectWorkoutContainer'>
 			<div className='workoutTypeContainer'>
 				<h2> Today's {todayWorkout} Workout: </h2>
-				<button onClick={() => changeText1()}>:recycle: {buttonText1}</button>
-				<button onClick={() => changeText2()}>:recycle: {buttonText2}</button>
-				<button onClick={() => changeText3()}>:recycle: {buttonText3}</button>
-				<button onClick={() => changeText4()}>:recycle: {buttonText4}</button>
-				<button onClick={() => changeText5()}>:recycle: {buttonText5}</button>
+
+				<button onClick={() => changeText1()}>♻️ {buttonText1}</button>
+				<button onClick={() => changeText2()}>♻️ {buttonText2}</button>
+				<button onClick={() => changeText3()}>♻️ {buttonText3}</button>
+				<button onClick={() => changeText4()}>♻️ {buttonText4}</button>
+				<button onClick={() => changeText5()}>♻️ {buttonText5}</button>
 			</div>
 			<button onSubmit={workoutData} className='start-btn'>
 				Start Workout

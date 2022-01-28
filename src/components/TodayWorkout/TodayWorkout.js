@@ -1,35 +1,53 @@
 import './TodayWorkout.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {useContext, useState} from 'react'
+import { useContext, useState } from 'react';
 import { WorkoutContext } from '../../workoutContext';
-
+import axios from 'axios';
 
 function TodayWorkout(props) {
-	
 	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
+	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
+	let resData = {};
 
 	function handleClick(event) {
 		let selectedWorkout = event.target.id;
-		console.log(selectedWorkout);
-		if (selectedWorkout === 'pushBtn') {
-			setTodayWorkout('Push');
-			console.log(todayWorkout);
-		} else if (selectedWorkout === 'pullBtn') {
-			setTodayWorkout('Pull');
-			console.log(todayWorkout);
-		} else if (selectedWorkout === 'legsBtn') {
-			setTodayWorkout('Legs');
-			console.log(todayWorkout);
-		} else if (selectedWorkout === 'yogaBtn') {
-			setTodayWorkout('Yoga');
-			console.log(todayWorkout);
-		} else if (selectedWorkout === 'customBtn') {
-			setTodayWorkout('Build Your Custom Workout');
-			console.log(todayWorkout);
+		switch (selectedWorkout) {
+			case 'pushBtn':
+				setFinalWorkout(resData[1].exercises);
+				setTodayWorkout(resData[1].name);
+				break;
+			case 'pullBtn':
+				setFinalWorkout(resData[0].exercises);
+				setTodayWorkout(resData[0].name);
+				break;
+			case 'legsBtn':
+				setFinalWorkout(resData[2].exercises);
+				setTodayWorkout(resData[2].name);
+				break;
+			case 'yogaBtn':
+				setFinalWorkout(resData[3].exercises);
+				setTodayWorkout(resData[3].name);
+				break;
+			case 'customBtn':
+				setFinalWorkout('Build Your Custom Workout');
+				break;
+			default:
+				console.log('switch error');
 		}
-
 	}
+
+	async function getWorkout() {
+		try {
+			const res = await axios.get(`http://localhost:4000/api/user/5`);
+			resData = res.data.workouts;
+			console.log(resData, 'resData');
+			return resData;
+		} catch (err) {
+			console.log(err);
+		}
+	}
+	getWorkout();
 
 	return (
 		<div className='todayWorkoutContainer'>

@@ -1,7 +1,7 @@
 nav {
     display: flex;
     justify-content: space-evenly;
-    border: 1px red solid;
+    height: 10vh;
 }
 
 .nav__ul {
@@ -9,4 +9,13 @@ nav {
   list-style-type: none;
   padding-left: 0em;
   margin-top: 0;
+}
+
+.nav__li {
+  color: rgb(29, 124, 148);
+  font-weight: bolder;
+  font-size: larger;
+  justify-content: space-evenly;
+  padding-left: 1em;
+  padding-right: 1em;
 }

@@ -3,19 +3,23 @@ import React from 'react';
 import { useContext, useEffect, useState } from 'react';
 import { WorkoutContext } from '../../workoutContext';
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 
 function SelectWorkout(props) {
 	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
 	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
 	const [loading, setLoading] = useState(true);
-	let [remainingWorkout, setRemainingWorkout] = useState([]);
-	let currentWorkout;
 	const [buttonText1, setButtonText1] = useState(finalWorkout[0]);
 	const [buttonText2, setButtonText2] = useState(finalWorkout[1]);
 	const [buttonText3, setButtonText3] = useState(finalWorkout[2]);
 	const [buttonText4, setButtonText4] = useState(finalWorkout[3]);
 	const [buttonText5, setButtonText5] = useState(finalWorkout[4]);
+	const [toDashboard, setToDashboard] = useState(false);
+
 	let [counter, setCounter] = useState(5);
+	let [remainingWorkout, setRemainingWorkout] = useState([]);
+	let currentWorkout;
+
 	async function getWorkout() {
 		let today = 0;
 		try {
@@ -99,14 +103,15 @@ function SelectWorkout(props) {
 		axios
 			.post('https://flex-five.herokuapp.com/api/user/5', workoutData)
 			.then((response) => {
-				console.log('Status: ', response.status);
-				console.log('Workouts: ', response.workoutData);
+				setToDashboard(true);
 			})
 			.catch((error) => {
 				console.error('Something went wrong!', error);
 			});
 	}
-
+	if (toDashboard === true) {
+		return <Navigate to='/mydashboard' />;
+	}
 	return (
 		<div className='selectWorkoutContainer'>
 			<div className='workoutTypeContainer'>

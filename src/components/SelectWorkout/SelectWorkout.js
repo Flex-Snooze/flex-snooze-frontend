@@ -8,6 +8,16 @@ function SelectWorkout(props) {
 	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
 	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
 	const [loading, setLoading] = useState(true);
+	let [remainingWorkout, setRemainingWorkout] = useState([]);
+	let currentWorkout;
+
+	const [buttonText1, setButtonText1] = useState(finalWorkout[0]);
+	const [buttonText2, setButtonText2] = useState(finalWorkout[1]);
+	const [buttonText3, setButtonText3] = useState(finalWorkout[2]);
+	const [buttonText4, setButtonText4] = useState(finalWorkout[3]);
+	const [buttonText5, setButtonText5] = useState(finalWorkout[4]);
+
+	let [counter, setCounter] = useState(5);
 
 	async function getWorkout() {
 		let today = 0;
@@ -31,6 +41,9 @@ function SelectWorkout(props) {
 					console.log('switch error');
 			}
 			setFinalWorkout(res.data.workouts[today].exercises);
+			setRemainingWorkout(finalWorkout);
+			console.log(currentWorkout, 'current workout');
+			console.log(remainingWorkout, 'remainingWorkout');
 			console.log(finalWorkout, 'final workout');
 		} catch (err) {
 			console.log(err);
@@ -39,7 +52,7 @@ function SelectWorkout(props) {
 
 	useEffect(() => {
 		const handleLoadingTimeOut = setTimeout(() => {
-			if (finalWorkout.length) {
+			if (buttonText5) {
 				setLoading(false);
 				console.log('triggered');
 			}
@@ -50,30 +63,51 @@ function SelectWorkout(props) {
 		return () => clearTimeout(handleLoadingTimeOut);
 	}, []);
 
-	if (loading && !finalWorkout.length) {
+	const changeText1 = () => {
+		setButtonText1(remainingWorkout[counter]);
+		setCounter((counter + 1) % remainingWorkout.length);
+		// console.log(counter);
+	};
+
+	const changeText2 = () => {
+		setButtonText2(remainingWorkout[counter]);
+		setCounter((counter + 1) % remainingWorkout.length);
+		// console.log(counter);
+	};
+	const changeText3 = () => {
+		setButtonText3(remainingWorkout[counter]);
+		setCounter((counter + 1) % remainingWorkout.length);
+		// console.log(counter);
+	};
+	const changeText4 = () => {
+		setButtonText4(remainingWorkout[counter]);
+		setCounter((counter + 1) % remainingWorkout.length);
+		// console.log(counter);
+	};
+	const changeText5 = () => {
+		setButtonText5(remainingWorkout[counter]);
+		setCounter((counter + 1) % remainingWorkout.length);
+		// console.log(counter);
+	};
+
+	if (loading && !buttonText5) {
 		return <h2>Loading...</h2>;
 	}
 
-	if (!loading && !finalWorkout.length) {
+	if (!loading && !buttonText5) {
 		return <h2>Oops, something went wrong. Please try again later! </h2>;
 	}
-
 
 	return (
 		<div className='selectWorkoutContainer'>
 			<div className='workoutTypeContainer'>
 				<h2> Today's {todayWorkout} Workout: </h2>
-				<div>{finalWorkout[0]}</div>
-				<button className='next-btn'>Next Excercise</button>
-				<div>{finalWorkout[1]}</div>{' '}
-				<button className='next-btn'>Next Excercise</button>
-				<div>{finalWorkout[2]}</div>
-				<button className='next-btn'>Next Excercise</button>
-				<div>{finalWorkout[3]}</div>
-				<button className='next-btn'>Next Excercise</button>
-				<div>{finalWorkout[4]}</div>
-				<button className='next-btn'>Next Excercise</button>
-				<button className='ok-btn'>Let's Go</button>
+
+				<button onClick={() => changeText1()}>♻️ {buttonText1}</button>
+				<button onClick={() => changeText2()}>♻️ {buttonText2}</button>
+				<button onClick={() => changeText3()}>♻️ {buttonText3}</button>
+				<button onClick={() => changeText4()}>♻️ {buttonText4}</button>
+				<button onClick={() => changeText5()}>♻️ {buttonText5}</button>
 			</div>
 		</div>
 	);

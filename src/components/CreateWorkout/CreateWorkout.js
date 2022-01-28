@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
-import { useContext } from 'react';
-import { WorkoutContext } from '../../workoutContext';
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 
 function CreateWorkout(props) {
 	const initialState = {
 		name: '',
-
 		exercises: '',
 		date: '',
 	};
-
-
 	const [formState, setFormState] = useState(initialState);
+	const [toDashboard, setToDashboard] = useState(false);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -21,30 +18,27 @@ function CreateWorkout(props) {
 		axios
 			.post('https://flex-five.herokuapp.com/api/user/5', {
 				...formState,
-
 			})
 			.then(function (response) {
-				console.log(response);
+				setToDashboard(true);
 			})
 			.catch(function (error) {
 				console.log(error);
 			});
 
 		setFormState(initialState);
-
 	};
 
 	const handleChange = (event) => {
 		setFormState({ ...formState, [event.target.id]: event.target.value });
-
-		console.log(event.target.value);
 	};
+
+	if (toDashboard === true) {
+		return <Navigate to='/mydashboard' />;
+	}
 
 	return (
 		<main>
-
-			{/* <div>{todayWorkout}</div> */}
-
 			<form onSubmit={handleSubmit}>
 				<h2>Add Custom Workout</h2>
 				<label htmlFor='name'>name:</label>

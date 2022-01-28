@@ -6,9 +6,11 @@ import axios from 'axios';
 function CreateWorkout(props) {
 	const initialState = {
 		name: '',
+
 		exercises: '',
 		date: '',
 	};
+
 
 	const [formState, setFormState] = useState(initialState);
 
@@ -18,7 +20,9 @@ function CreateWorkout(props) {
 
 		axios
 			.post('http://localhost:4000/api/user/5', {
+
 				...formState,
+
 			})
 			.then(function (response) {
 				console.log(response);
@@ -26,6 +30,9 @@ function CreateWorkout(props) {
 			.catch(function (error) {
 				console.log(error);
 			});
+
+		setFormState(initialState);
+
 	};
 
 	const handleChange = (event) => {
@@ -36,6 +43,9 @@ function CreateWorkout(props) {
 
 	return (
 		<main>
+
+			{/* <div>{todayWorkout}</div> */}
+
 			<form onSubmit={handleSubmit}>
 				<h2>Add Custom Workout</h2>
 				<label htmlFor='name'>name:</label>

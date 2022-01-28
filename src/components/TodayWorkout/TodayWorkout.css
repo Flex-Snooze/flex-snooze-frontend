@@ -1,3 +1,64 @@
+body {
+	background-color: #d7d6d6;
+	background-image: url(./cat_on_mat.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
 .todayWorkoutContainer {
-	border: 2px solid pink;
+	margin: auto;
+	width: 30%;
+}
+
+h2 {
+	color: #36413e;
+}
+
+a {
+	list-style: none;
+	/* color: #098ca3ef; */
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.header-nav {
+	color: #0d8494;
+	font-size: 18px;
+	/* text-shadow: 1px 0px rgb(54 65 62 / 90%); */
+	background: -webkit-linear-gradient(right, rgb(25, 184, 184), rgb(3, 91, 107));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.workout-select {
+	height: 56px;
+	width: 250px;
+	margin: 24px;
+	padding-left: 24px;
+	padding-right: 24px;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* white-space: nowrap; */
+	/* flex-shrink: 0;
+	transition: background-color 0.1s ease-in; */
+	--bg-opacity: 1;
+	--text-opacity: 1;
+	/* background-color: #604fcd; */
+	background-color: #5d5e60;
+	color: #fff;
+	border: 1px solid #130b43;
+	--border-opacity: 1;
+	/* box-shadow: 0 4px 7px rgb(79 114 205 / 40%); */
+	box-shadow: 0px 4px 7px rgb(54 65 62 / 90%);
+	box-sizing: border-box;
 }

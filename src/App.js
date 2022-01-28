@@ -13,15 +13,8 @@ import CreateWorkout from './components/CreateWorkout/CreateWorkout';
 function App() {
 	const [todayWorkout, setTodayWorkout] = useState('Push');
 	const [logId, setLogId] = useState(-1);
-	const [finalWorkout, setFinalWorkout] = useState([
-		'Bench Press',
-		'Overhead Press',
-		'Dumbbell Lateral Raises',
-		'Tricep Pushdown',
-		'Incline Dumbbell Press',
-	]);
+	const [finalWorkout, setFinalWorkout] = useState([]);
 	const [userWorkoutData, setUserWorkoutData] = useState([{}]);
-
 
 	return (
 		<div>

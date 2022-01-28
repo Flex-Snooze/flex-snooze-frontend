@@ -1,0 +1,7 @@
+.logDetail__div {
+    display: grid;
+    border: 2px orange solid;
+    grid-row: 3/ span 1;
+    grid-column: 2;
+
+}

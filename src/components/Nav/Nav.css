@@ -1,0 +1,12 @@
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px red solid;
+}
+
+.nav__ul {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0em;
+  margin-top: 0;
+}

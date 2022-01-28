@@ -46,7 +46,6 @@ function SelectWorkout(props) {
 			console.log(err);
 		}
 	}
-
 	useEffect(() => {
 		const handleLoadingTimeOut = setTimeout(() => {
 			if (buttonText5) {

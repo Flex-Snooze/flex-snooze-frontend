@@ -1,31 +1,16 @@
-h2 {
-	color: rgb(29, 124, 148);
-}
-
-a {
-	list-style: none;
-	/* color: #098ca3ef; */
-	font-weight: 700;
-	text-decoration: none;
-}
-
-.header-nav {
-	color: #0d8494;
-	font-size: 18px;
-	/* text-shadow: 1px 0px rgb(54 65 62 / 90%); */
-	background: -webkit-linear-gradient(
-		right,
-		rgb(37, 98, 121),
-		rgb(55, 124, 141)
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-.todayWorkoutContainer {
+main {
 	display: flex;
 }
 
-.workout-select {
+h2 {
+	justify-content: center;
+}
+
+main input {
+	margin: 1em;
+}
+
+.submit-btn {
 	height: 56px;
 	width: 250px;
 	margin: 24px;

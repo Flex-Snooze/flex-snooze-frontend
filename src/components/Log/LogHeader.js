@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext, useState, useEffect } from 'react';
 import { WorkoutContext } from '../../workoutContext';
 import axios from 'axios';
-import './LogHeader.css'
+import './LogHeader.css';
 
 function LogHeader(props) {
 	const { userWorkoutData, setUserWorkoutData } = useContext(WorkoutContext);
@@ -46,15 +46,20 @@ function LogHeader(props) {
 	}
 
 	return (
-		<div className='logHeader__div'>
-			<h3>Workout Log</h3>
-				{userWorkoutData.slice(0).reverse().map((workout, idx) => {
-					return (
-						<button className="logHeader__button" onClick={handleClick} key={idx} id={idx}>
-							{workout.name} {workout.date}
-						</button>
-					);
-				})}
+		<div className='logHeader__div, scroller'>
+			<h3 className='logHeader__h3'>Workout Log</h3>
+			{/* The type of exercise and date were going to the top but the log details were moved into whatever the last entry was.  I removed the reverse and the log and details match but are back at the bottom. */}
+			{userWorkoutData.slice(0).map((workout, idx) => {
+				return (
+					<button
+						className='logHeader__button'
+						onClick={handleClick}
+						key={idx}
+						id={idx}>
+						{workout.name} {workout.date}
+					</button>
+				);
+			})}
 		</div>
 	);
 }

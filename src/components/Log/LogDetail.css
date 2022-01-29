@@ -1,7 +1,8 @@
 .logDetail__div {
-    display: grid;
-    grid-row: 3/ span 1;
-    grid-column: 2;
-    padding-bottom: 18em;
-
+	font-size: 1.5em;
+	display: grid;
+	grid-row: 3 / span 1;
+	grid-column: 2;
+	padding: 1em;
 }
+

@@ -26,8 +26,8 @@ function LogDetail(props) {
 				<h3>Details for {userWorkoutData[logId].date}</h3>
 				<div className='logDetail__inner-div'>
 					{Array.isArray(userWorkoutData[logId].exercises)
-						? userWorkoutData[logId].exercises.map((exercise) => (
-								<p>{exercise}</p>
+						? userWorkoutData[logId].exercises.map((exercise, idx) => (
+								<p key={idx}>{exercise}</p>
 						  ))
 						: userWorkoutData[logId].exercises}
 				</div>

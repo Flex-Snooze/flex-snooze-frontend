@@ -92,7 +92,7 @@ function SelectWorkout(props) {
 				`${buttonText4}`,
 				`${buttonText5}`,
 			],
-			date: new Date().toDateString().slice(4),
+			date: new Date().toDateString().slice(4, 10),
 		};
 		axios
 			.post('https://flex-five.herokuapp.com/api/user/5', workoutData)

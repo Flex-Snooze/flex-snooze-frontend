@@ -18,7 +18,7 @@ function CreateWorkout(props) {
 		axios
 			.post('https://flex-five.herokuapp.com/api/user/5', {
 				...formState,
-				date: new Date().toDateString().slice(4),
+				date: new Date().toDateString().slice(4, 10),
 			})
 			.then(function (response) {
 				setToDashboard(true);

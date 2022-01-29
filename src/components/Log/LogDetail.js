@@ -23,11 +23,15 @@ function LogDetail(props) {
 	if (logId >= 0) {
 		return (
 			<section className='logDetail__div'>
-				<h3>Details for {userWorkoutData[logId].date}</h3>
+				<h4>
+					{userWorkoutData[logId].date}'s {userWorkoutData[logId].name} Workout:
+				</h4>
 				<div className='logDetail__inner-div'>
 					{Array.isArray(userWorkoutData[logId].exercises)
 						? userWorkoutData[logId].exercises.map((exercise, idx) => (
-								<p key={idx}>{exercise}</p>
+								<p key={idx} class='logDetail__items'>
+									<mark>{exercise}</mark>
+								</p>
 						  ))
 						: userWorkoutData[logId].exercises}
 				</div>

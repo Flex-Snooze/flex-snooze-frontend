@@ -6,3 +6,10 @@
 	padding: 1em;
 }
 
+.logDetail__inner-div {
+}
+
+mark {
+	border-radius: 5px;
+	background-color: rgba(29, 124, 148, 0.6);
+}

@@ -48,7 +48,7 @@ function LogHeader(props) {
 	return (
 		<div className='logHeader__div'>
 			<h3>Workout Log</h3>
-				{userWorkoutData.map((workout, idx) => {
+				{userWorkoutData.slice(0).reverse().map((workout, idx) => {
 					return (
 						<button className="logHeader__button" onClick={handleClick} key={idx} id={idx}>
 							{workout.name} {workout.date}

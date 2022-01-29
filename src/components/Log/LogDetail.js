@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext, useState, useEffect } from 'react';
 import { WorkoutContext } from '../../workoutContext';
 import axios from 'axios';
-import './LogDetail.css'
+import './LogDetail.css';
 
 function LogDetail(props) {
 	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
@@ -27,20 +27,16 @@ function LogDetail(props) {
 
 	if (logId >= 0) {
 		return (
-			<div className='logDetail__div'>
-                <h3>Details</h3>
-				<span>{userWorkoutData[logId].date}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[0]}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[1]}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[2]}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[3]}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[4]}</span>
-			</div>
+			// Details are displaying for customer workout as indexes of the string according to [] set below.  Does the customer workout need to have its state sent to a separate model on the backend so that it can display correctly.
+			<section className='logDetail__div'>
+				<h3>Details</h3>
+				<div>{userWorkoutData[logId].date}</div>
+				<div>{userWorkoutData[logId].exercises[0]}</div>
+				<div>{userWorkoutData[logId].exercises[1]}</div>
+				<div>{userWorkoutData[logId].exercises[2]}</div>
+				<div>{userWorkoutData[logId].exercises[3]}</div>
+				<div>{userWorkoutData[logId].exercises[4]}</div>
+			</section>
 		);
 	} else return <h2>Select a workout to see details!</h2>;
 }

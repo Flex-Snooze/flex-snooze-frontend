@@ -2,7 +2,10 @@ nav {
 	display: flex;
 	justify-content: space-evenly;
 	height: 10vh;
+  margin-bottom: 1px;
+  padding-bottom: 0;
 }
+
 
 .nav__ul {
 	display: flex;

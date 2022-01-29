@@ -116,25 +116,26 @@ function SelectWorkout(props) {
 		<div className='selectWorkoutContainer'>
 			<div className='workoutTypeContainer'>
 				<h2> Today's {todayWorkout} Workout: </h2>
+				<h3>Click to Switch to a Different Exercise</h3>
 
 				<button className='workout-select' onClick={() => changeText1()}>
-					♻️ {buttonText1}
+					{buttonText1}
 				</button>
 				<button className='workout-select' onClick={() => changeText2()}>
-					♻️ {buttonText2}
+					{buttonText2}
 				</button>
 				<button className='workout-select' onClick={() => changeText3()}>
-					♻️ {buttonText3}
+					{buttonText3}
 				</button>
 				<button className='workout-select' onClick={() => changeText4()}>
-					♻️ {buttonText4}
+					{buttonText4}
 				</button>
 				<button className='workout-select' onClick={() => changeText5()}>
-					♻️ {buttonText5}
+					{buttonText5}
 				</button>
 			</div>
 			<button onClick={handleClick} className='start-btn workout-select'>
-				Log Workout as Complete! ✅
+				Log Workout as Complete!
 			</button>
 		</div>
 	);

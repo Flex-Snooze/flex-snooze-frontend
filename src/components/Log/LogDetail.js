@@ -15,7 +15,6 @@ function LogDetail(props) {
 		const handleLoadingTimeOut = setTimeout(() => {
 			if (logId >= 0) {
 				setLoading(false);
-				console.log('triggered');
 			}
 		}, 5000);
 		return () => clearTimeout(handleLoadingTimeOut);
@@ -31,7 +30,7 @@ function LogDetail(props) {
 			<section className='logDetail__div'>
 				<h3>Details</h3>
 				<div>{userWorkoutData[logId].date}</div>
-				<div>{userWorkoutData[logId].exercises[0]}</div>
+				<div>{userWorkoutData[logId].exercises}</div>
 				<div>{userWorkoutData[logId].exercises[1]}</div>
 				<div>{userWorkoutData[logId].exercises[2]}</div>
 				<div>{userWorkoutData[logId].exercises[3]}</div>

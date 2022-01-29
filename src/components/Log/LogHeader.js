@@ -5,8 +5,8 @@ import axios from 'axios';
 import './LogHeader.css';
 
 function LogHeader(props) {
-	const { userWorkoutData, setUserWorkoutData } = useContext(WorkoutContext);
-	const { logId, setLogId } = useContext(WorkoutContext);
+	const { userWorkoutData, setUserWorkoutData, setLogId } =
+		useContext(WorkoutContext);
 	const [loading, setLoading] = useState(true);
 
 	async function getLog() {

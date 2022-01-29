@@ -6,8 +6,8 @@ import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 
 function SelectWorkout(props) {
-	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
-	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
+	const { todayWorkout, finalWorkout, setFinalWorkout } =
+		useContext(WorkoutContext);
 	const [loading, setLoading] = useState(true);
 	const [buttonText1, setButtonText1] = useState(finalWorkout[0]);
 	const [buttonText2, setButtonText2] = useState(finalWorkout[1]);
@@ -18,13 +18,11 @@ function SelectWorkout(props) {
 
 	let [counter, setCounter] = useState(5);
 	let [remainingWorkout, setRemainingWorkout] = useState([]);
-	let currentWorkout;
 
 	async function getWorkout() {
 		let today = 0;
 		try {
 			const res = await axios.get(`https://flex-five.herokuapp.com/api/user/5`);
-			console.log(res.data);
 			switch (todayWorkout) {
 				case 'Pull':
 					today = 0;
@@ -43,9 +41,6 @@ function SelectWorkout(props) {
 			}
 			setFinalWorkout(res.data.workouts[today].exercises);
 			setRemainingWorkout(finalWorkout);
-			console.log(currentWorkout, 'current workout');
-			console.log(remainingWorkout, 'remainingWorkout');
-			console.log(finalWorkout, 'final workout');
 		} catch (err) {
 			console.log(err);
 		}
@@ -54,7 +49,6 @@ function SelectWorkout(props) {
 		const handleLoadingTimeOut = setTimeout(() => {
 			if (buttonText5) {
 				setLoading(false);
-				console.log('triggered');
 			}
 		}, 5000);
 		getWorkout();

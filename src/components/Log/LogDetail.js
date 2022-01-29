@@ -1,14 +1,10 @@
 import React from 'react';
 import { useContext, useState, useEffect } from 'react';
 import { WorkoutContext } from '../../workoutContext';
-import axios from 'axios';
 import './LogDetail.css';
 
 function LogDetail(props) {
-	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
-	const { userWorkoutData, setUserWorkoutData } = useContext(WorkoutContext);
-	const { logId, setLogId } = useContext(WorkoutContext);
-
+	const { logId, userWorkoutData } = useContext(WorkoutContext);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
@@ -27,11 +23,12 @@ function LogDetail(props) {
 	if (logId >= 0) {
 		return (
 			<section className='logDetail__div'>
-				<h3>Details</h3>
-				<div>{userWorkoutData[logId].date}</div>
-				<div>
+				<h3>Details for {userWorkoutData[logId].date}</h3>
+				<div className='logDetail__inner-div'>
 					{Array.isArray(userWorkoutData[logId].exercises)
-						? userWorkoutData[logId].exercises.join('\n')
+						? userWorkoutData[logId].exercises.map((exercise) => (
+								<p>{exercise}</p>
+						  ))
 						: userWorkoutData[logId].exercises}
 				</div>
 			</section>

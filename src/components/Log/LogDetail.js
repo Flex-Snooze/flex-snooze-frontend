@@ -29,7 +29,7 @@ function LogDetail(props) {
 				<div className='logDetail__inner-div'>
 					{Array.isArray(userWorkoutData[logId].exercises)
 						? userWorkoutData[logId].exercises.map((exercise, idx) => (
-								<p key={idx} class='logDetail__items'>
+								<p key={idx}>
 									<mark>{exercise}</mark>
 								</p>
 						  ))

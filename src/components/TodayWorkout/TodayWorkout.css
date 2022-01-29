@@ -36,17 +36,15 @@ a {
 	font-weight: 600;
 	align-items: center;
 	justify-content: center;
-	/* white-space: nowrap; */
-	/* flex-shrink: 0;
-	transition: background-color 0.1s ease-in; */
+	flex-shrink: 0;
+	cursor: pointer;
+	transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
 	--bg-opacity: 1;
 	--text-opacity: 1;
-	/* background-color: #604fcd; */
 	background-color: #5d5e60;
 	color: #fff;
 	border: 1px solid #130b43;
 	--border-opacity: 1;
-	/* box-shadow: 0 4px 7px rgb(79 114 205 / 40%); */
 	box-shadow: 0px 4px 7px rgb(54 65 62 / 90%);
 	box-sizing: border-box;
 }

@@ -13,7 +13,6 @@ function LogHeader(props) {
 		try {
 			const res = await axios.get(`https://flex-five.herokuapp.com/api/user/5`);
 			setUserWorkoutData(res.data.log);
-
 		} catch (err) {
 			console.log(err);
 		}
@@ -46,17 +45,20 @@ function LogHeader(props) {
 		<div className='logHeader__div, scroller'>
 			<h3 className='logHeader__h3'>Workout Log</h3>
 
-			{userWorkoutData.slice(0).reverse().map((workout, idx) => {
-				return (
-					<button
-						className='logHeader__button'
-						onClick={handleClick}
-						key={idx}
-						id={idx}>
-						{workout.name} {workout.date}
-					</button>
-				);
-			})}
+			{userWorkoutData
+				.slice(0)
+				.reverse()
+				.map((workout, idx) => {
+					return (
+						<button
+							className='logHeader__button'
+							onClick={handleClick}
+							key={idx}
+							id={userWorkoutData.length - idx - 1}>
+							{workout.name} {workout.date}
+						</button>
+					);
+				})}
 		</div>
 	);
 }

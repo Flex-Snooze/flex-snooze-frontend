@@ -3,13 +3,10 @@ import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 import '../CreateWorkout/CreateWorkout.css';
 
-
-
 function CreateWorkout(props) {
 	const initialState = {
 		name: '',
 		exercises: '',
-		date: '',
 	};
 	const [formState, setFormState] = useState(initialState);
 	const [toDashboard, setToDashboard] = useState(false);
@@ -21,6 +18,7 @@ function CreateWorkout(props) {
 		axios
 			.post('https://flex-five.herokuapp.com/api/user/5', {
 				...formState,
+				date: new Date().toDateString().slice(4),
 			})
 			.then(function (response) {
 				setToDashboard(true);

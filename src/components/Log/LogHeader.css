@@ -1,11 +1,13 @@
 .logHeader__div {
     display: grid;
-    border: 2px green solid;
     grid-column: 1;
     grid-row: 3/ span 2;
+    
 }
 
 .logHeader__button {
     background-color: none;
+    order: 1;
+    flex-direction: column-reverse;
     
 }

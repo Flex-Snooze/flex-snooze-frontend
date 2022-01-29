@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 import '../CreateWorkout/CreateWorkout.css';
 
+
+
 function CreateWorkout(props) {
 	const initialState = {
 		name: '',

@@ -11,7 +11,7 @@ function LogHeader(props) {
 
 	async function getLog() {
 		try {
-			const res = await axios.get(`http://localhost:4000/api/user/5`);
+			const res = await axios.get(`https://flex-five.herokuapp.com/api/user/5`);
 			setUserWorkoutData(res.data.log);
 			console.log(res.data.log);
 			console.log(userWorkoutData, 'user log');
@@ -48,7 +48,7 @@ function LogHeader(props) {
 	return (
 		<div className='logHeader__div'>
 			<h3>Workout Log</h3>
-				{userWorkoutData.map((workout, idx) => {
+				{userWorkoutData.slice(0).reverse().map((workout, idx) => {
 					return (
 						<button className="logHeader__button" onClick={handleClick} key={idx} id={idx}>
 							{workout.name} {workout.date}

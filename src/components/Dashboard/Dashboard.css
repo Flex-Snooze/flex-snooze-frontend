@@ -1,9 +1,10 @@
 .dashboard__div {
-	display: grid;
-	height: 60vh;
 
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 0.2fr 0.2fr 3fr;
+    display: grid;
+    height: 70vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .2fr .2fr 3fr;
+
 }
 
 .dashboard__h2 {

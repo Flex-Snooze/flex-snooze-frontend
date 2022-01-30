@@ -1,7 +1,7 @@
 import React from 'react';
 import RachelHeadshot from '../../Assets/rachel-headshot.jpeg';
 import GeorgeHeadshot from '../../Assets/george-headshot.jpeg';
-import AshleighHeadshot from '../../Assets/ashleigh-headshot.jpeg';
+import AshleighHeadshot from '../../Assets/ashleigh-headshot.jpg';
 import BillHeadshot from '../../Assets/bill-headshot.jpeg';
 import './About.css'
 

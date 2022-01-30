@@ -10,7 +10,7 @@
 
     overflow-y: scroll;
 }
-h3 , h4 {
+h3 {
     color: rgb(29, 124, 148)
 }
 
@@ -37,6 +37,6 @@ h3 , h4 {
 }
 
 img {
-    height: 70%;
-    width: 80%;
+    height: 8em;
+
 }

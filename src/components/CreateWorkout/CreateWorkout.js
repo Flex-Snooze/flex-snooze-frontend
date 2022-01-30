@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
+import '../CreateWorkout/CreateWorkout.css';
 
 function CreateWorkout(props) {
 	const initialState = {
 		name: '',
 		exercises: '',
-		date: '',
 	};
 	const [formState, setFormState] = useState(initialState);
 	const [toDashboard, setToDashboard] = useState(false);
@@ -18,6 +18,7 @@ function CreateWorkout(props) {
 		axios
 			.post('https://flex-five.herokuapp.com/api/user/5', {
 				...formState,
+				date: new Date().toDateString().slice(4, 10),
 			})
 			.then(function (response) {
 				setToDashboard(true);
@@ -41,13 +42,14 @@ function CreateWorkout(props) {
 		<main>
 			<form onSubmit={handleSubmit}>
 				<h2>Add Custom Workout</h2>
-				<label htmlFor='name'>name:</label>
+				<label htmlFor='name'>Name:</label>
 				<input
 					type='text'
 					id='name'
 					onChange={handleChange}
 					value={formState.name}
 				/>
+				<br />
 				<label htmlFor='date'> Date Completed:</label>
 				<input
 					type='date'
@@ -55,6 +57,7 @@ function CreateWorkout(props) {
 					onChange={handleChange}
 					value={formState.date}
 				/>
+				<br />
 
 				<label htmlFor='exercises'>Workout Notes:</label>
 				<textarea
@@ -63,7 +66,7 @@ function CreateWorkout(props) {
 					rows='10'
 					onChange={handleChange}
 					value={formState.exercises}></textarea>
-				<button> Submit</button>
+				<button className='submit-btn'> Submit</button>
 			</form>
 		</main>
 	);

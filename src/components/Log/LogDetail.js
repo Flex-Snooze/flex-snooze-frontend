@@ -1,21 +1,16 @@
 import React from 'react';
 import { useContext, useState, useEffect } from 'react';
 import { WorkoutContext } from '../../workoutContext';
-import axios from 'axios';
-import './LogDetail.css'
+import './LogDetail.css';
 
 function LogDetail(props) {
-	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
-	const { userWorkoutData, setUserWorkoutData } = useContext(WorkoutContext);
-	const { logId, setLogId } = useContext(WorkoutContext);
-
+	const { logId, userWorkoutData } = useContext(WorkoutContext);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		const handleLoadingTimeOut = setTimeout(() => {
 			if (logId >= 0) {
 				setLoading(false);
-				console.log('triggered');
 			}
 		}, 5000);
 		return () => clearTimeout(handleLoadingTimeOut);
@@ -27,20 +22,20 @@ function LogDetail(props) {
 
 	if (logId >= 0) {
 		return (
-			<div className='logDetail__div'>
-                <h3>Details</h3>
-				<span>{userWorkoutData[logId].date}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[0]}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[1]}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[2]}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[3]}</span>
-				<br></br>
-				<span>{userWorkoutData[logId].exercises[4]}</span>
-			</div>
+			<section className='logDetail__div'>
+				<h4>
+					{userWorkoutData[logId].date}'s {userWorkoutData[logId].name} Workout:
+				</h4>
+				<div className='logDetail__inner-div'>
+					{Array.isArray(userWorkoutData[logId].exercises)
+						? userWorkoutData[logId].exercises.map((exercise, idx) => (
+								<p key={idx}>
+									<mark>{exercise}</mark>
+								</p>
+						  ))
+						: userWorkoutData[logId].exercises}
+				</div>
+			</section>
 		);
 	} else return <h2>Select a workout to see details!</h2>;
 }

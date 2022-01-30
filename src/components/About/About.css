@@ -1,0 +1,42 @@
+.about__div {
+    margin-top: 0;
+    height: 60vh;
+    width: 100vw;
+}
+
+.about__p {
+    font-size: .8em;
+    padding-top: 0;
+
+    overflow-y: scroll;
+}
+h3 {
+    color: rgb(29, 124, 148)
+}
+
+
+.about__cardContainer {
+    display: grid;
+    height: 40vh;
+    grid-template-areas: "a b" "c d";
+    overflow-y: scroll;
+}
+
+.about__cardGeorge {
+    grid-area: 'a';
+
+}
+.about__cardRachel {
+    grid-area: 'b';
+}
+.about__cardBill {
+    grid-area: 'c';
+}
+.about__cardAshleigh {
+    grid-area: 'd';
+}
+
+img {
+    height: 8em;
+
+}

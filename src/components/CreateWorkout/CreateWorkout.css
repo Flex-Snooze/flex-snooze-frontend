@@ -1,33 +1,24 @@
-
-.logHeader__h3 {
-	text-decoration: underline;
+main {
+	display: flex;
 }
 
-.logHeader__div,
-.scroller {
-	display: grid;
-	grid-column: 1;
-	grid-row: 3 / span 2;
-	overflow-y: scroll;
-	scrollbar-color: rebeccapurple green;
-	scrollbar-width: thin;
-	font-size: 1.5em;
-
+h2 {
+	justify-content: center;
 }
 
-.logHeader__button {
-	background-color: none;
-	order: 1;
-	flex-direction: column-reverse;
+main input {
+	margin: 1em;
+}
+
+.submit-btn {
 	height: 56px;
-	width: 80%;
+	width: 250px;
 	margin: 24px;
 	padding-left: 24px;
 	padding-right: 24px;
 	border-radius: 8px;
 	font-size: 18px;
 	font-weight: 600;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	/* white-space: nowrap; */

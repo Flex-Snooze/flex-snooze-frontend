@@ -1,20 +1,22 @@
 .App {
-  text-align: center;
-  background-image: url(./cat_on_mat.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-position: absolute; bottom:0;
-  font-family: 'Strait', sans-serif;
-  height: 100vh;
+	text-align: center;
+	background-image: url(./cat_on_mat.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-position: absolute;
+	bottom: 0;
+	font-family: 'Strait', sans-serif;
+	height: 100vh;
 }
 html {
-  margin-top: -20px;
-
+	margin-top: -20px;
 }
 
 h1 {
-  font-family: 'Rock Salt', cursive;
-  text-align: center;
-  color: rgb(29, 124, 148);
+	font-family: 'Rock Salt', cursive;
+	text-align: center;
+	text-shadow: 0.06em 0.06em 0.06em rgba(0, 0, 0, 0.35);
+	color: rgb(203, 193, 181);
+	background-color: rgb(29, 124, 148);
 }

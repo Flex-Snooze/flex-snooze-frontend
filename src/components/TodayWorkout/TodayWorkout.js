@@ -6,8 +6,7 @@ import { WorkoutContext } from '../../workoutContext';
 import axios from 'axios';
 
 function TodayWorkout(props) {
-	const { todayWorkout, setTodayWorkout } = useContext(WorkoutContext);
-	const { finalWorkout, setFinalWorkout } = useContext(WorkoutContext);
+	const { setFinalWorkout, setTodayWorkout } = useContext(WorkoutContext);
 	let resData = {};
 
 	function handleClick(event) {
@@ -41,7 +40,6 @@ function TodayWorkout(props) {
 		try {
 			const res = await axios.get(`https://flex-five.herokuapp.com/api/user/5`);
 			resData = res.data.workouts;
-			console.log(resData, 'resData');
 			return resData;
 		} catch (err) {
 			console.log(err);

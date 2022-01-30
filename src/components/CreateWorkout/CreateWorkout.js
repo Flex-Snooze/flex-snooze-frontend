@@ -48,8 +48,9 @@ function CreateWorkout(props) {
 					id='name'
 					onChange={handleChange}
 					value={formState.name}
+					placeholder='Mountain Climbers'
 				/>
-				<br />
+
 				<label htmlFor='date'> Date Completed:</label>
 				<input
 					type='date'
@@ -57,10 +58,10 @@ function CreateWorkout(props) {
 					onChange={handleChange}
 					value={formState.date}
 				/>
-				<br />
 
 				<label htmlFor='exercises'>Workout Notes:</label>
 				<textarea
+					placeholder='Notes'
 					id='exercises'
 					cols='40'
 					rows='10'

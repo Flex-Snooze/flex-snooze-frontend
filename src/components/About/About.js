@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import RachelHeadshot from '../../Assets/rachel-headshot.jpeg';
 import GeorgeHeadshot from '../../Assets/george-headshot.png';
@@ -5,6 +6,22 @@ import AshleighHeadshot from '../../Assets/ashleigh-headshot.jpg';
 import BillHeadshot from '../../Assets/bill-headshot.jpeg';
 import './About.css';
 
+=======
+<<<<<<< HEAD
+import './About.css';
+import AshleighHeadshot from '../../Assets/ashleigh-headshot.jpg';
+import BillHeadshot from '../../Assets/bill-headshot.jpeg';
+import GeorgeHeadshot from '../../Assets/george-headshot.jpeg';
+import RachelHeadshot from '../../Assets/rachel-headshot.jpeg';
+=======
+import React from 'react';
+import RachelHeadshot from '../../Assets/rachel-headshot.jpeg';
+import GeorgeHeadshot from '../../Assets/george-headshot.png';
+import AshleighHeadshot from '../../Assets/ashleigh-headshot.jpg';
+import BillHeadshot from '../../Assets/bill-headshot.jpeg';
+import './About.css';
+>>>>>>> c249bd6 (Fix deletion bug)
+>>>>>>> fd9ce1a (finishing polish)
 
 function About(props) {
 	return (

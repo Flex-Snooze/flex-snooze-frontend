@@ -39,6 +39,7 @@ img {
 	height: 8em;
 }
 
+
 @media only screen and (min-width: 1024px) {
 	.about__p {
 		font-size: x-large;

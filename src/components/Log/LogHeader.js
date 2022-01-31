@@ -11,8 +11,10 @@ function LogHeader(props) {
 
 	async function getLog() {
 		try {
-			const res = await axios.get(`https://flex-five.herokuapp.com/api/user/5`);
-			setUserWorkoutData(res.data.log);
+			// const res = await axios.get(`https://flex-five.herokuapp.com/api/user/5`);
+			const res = await axios.get(`https://flex-five.herokuapp.com/api/log`);
+			// setUserWorkoutData(res.data.log);
+			setUserWorkoutData(res.data);
 		} catch (err) {
 			console.log(err);
 		}

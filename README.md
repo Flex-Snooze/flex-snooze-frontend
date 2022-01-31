@@ -20,15 +20,22 @@ Click on the link to the tool and navigate in your browser window.
 
 ## MVP - User Stories
 As a user, I would like a workout personally recommended to me
+
 As a user, I would like to be able to skip certain workouts
+
 As a user, I would like to be able to delete certain workouts from the collection
+
 As a user, I would like a log of my completed workouts
 
 ## Stetch goals - User Stories
 As a user, I would like to be able to add my custom workouts
+
 As a user, I would like my workouts to be logged on a calendar
+
 As a user, I would like to be able to flexibly "snooze" types of workouts or exercises for periods of my choosing
+
 As a user I would like to establish a goal weight, see my current weight, and see my progression
+
 As a user I would like the app to track how many calories I burned per session
 
 ## Open Issues & Challenges

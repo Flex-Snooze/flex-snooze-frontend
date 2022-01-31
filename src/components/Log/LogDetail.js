@@ -11,9 +11,9 @@ function LogDetail(props) {
 	const [loading, setLoading] = useState(true);
 	const navigate = useNavigate();
 
-	function wait(ms, value) {
-		return new Promise((resolve) => setTimeout(resolve, ms, value));
-	}
+	// function wait(ms, value) {
+	// 	return new Promise((resolve) => setTimeout(resolve, ms, value));
+	// }
 
 	function handleClick(event) {
 		event.preventDefault();
@@ -27,12 +27,12 @@ function LogDetail(props) {
 			.then(() => {
 				axios
 					.get(`https://flex-five.herokuapp.com/api/log`)
-					.then((value) => wait(1000, value))
+					// .then((value) => wait(1000, value))
 					.then((res) => {
 						setUserWorkoutData(res.data);
 						setLogId(-1);
 					})
-					.then((value) => wait(1000, value))
+					// .then((value) => wait(1000, value))
 					.then(() => navigate('/mydashboard'));
 			})
 

@@ -16,7 +16,7 @@ Click on the link to the tool and navigate in your browser window.
 ![Screen Shot 2022-01-30 at 7 33 47 PM](https://user-images.githubusercontent.com/93795090/151724612-e18eed2d-6f0e-48ed-9ec4-cb378dbee57e.png)
 ![Screen Shot 2022-01-30 at 7 34 39 PM](https://user-images.githubusercontent.com/93795090/151724641-9cfb8f90-36a4-4c6d-8a57-cf5c89f427a2.png)
 ![Screen Shot 2022-01-30 at 7 34 59 PM](https://user-images.githubusercontent.com/93795090/151724655-9341054f-01a7-4647-b665-70c52a8bc4f0.png)
-![Screen Shot 2022-01-31 at 9 18 53 AM](https://user-images.githubusercontent.com/93795090/151809928-5e7b3fd9-de65-4b5c-8438-5592fef1da32.png)
+
 
 ## Planning Highlights
 ### Initial Stage

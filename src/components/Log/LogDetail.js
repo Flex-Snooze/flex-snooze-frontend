@@ -11,15 +11,9 @@ function LogDetail(props) {
 	const [loading, setLoading] = useState(true);
 	const navigate = useNavigate();
 
-<<<<<<< HEAD
-	// function wait(ms, value) {
-	// 	return new Promise((resolve) => setTimeout(resolve, ms, value));
-	// }
-=======
 	function wait(ms, value) {
 		return new Promise((resolve) => setTimeout(resolve, ms, value));
 	}
->>>>>>> c249bd6 (Fix deletion bug)
 
 	function handleClick(event) {
 		event.preventDefault();
@@ -33,20 +27,17 @@ function LogDetail(props) {
 			.then(() => {
 				axios
 					.get(`https://flex-five.herokuapp.com/api/log`)
-<<<<<<< HEAD
-					// .then((value) => wait(1000, value))
-=======
+
 					.then((value) => wait(1000, value))
->>>>>>> c249bd6 (Fix deletion bug)
+
+
 					.then((res) => {
 						setUserWorkoutData(res.data);
 						setLogId(-1);
 					})
-<<<<<<< HEAD
-					// .then((value) => wait(1000, value))
-=======
+
 					.then((value) => wait(1000, value))
->>>>>>> c249bd6 (Fix deletion bug)
+
 					.then(() => navigate('/mydashboard'));
 			})
 

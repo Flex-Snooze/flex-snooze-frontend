@@ -11,17 +11,16 @@
 	overflow-y: scroll;
 }
 h3 {
-
 	color: rgb(29, 124, 148);
 
 }
 
-.about__cardContainer {
-	display: grid;
-	height: 40vh;
-	grid-template-areas: 'a b' 'c d';
-	overflow-y: scroll;
-}
+	.about__cardContainer {
+		display: grid;
+		height: 40vh;
+		grid-template-areas: 'a b' 'c d';
+		overflow-y: scroll;
+	}
 
 .about__cardGeorge {
 	grid-area: 'a';
@@ -42,6 +41,7 @@ img {
 
 @media only screen and (min-width: 390px) {
 	.about__p {
+		
 	}
 }
 
@@ -80,4 +80,3 @@ img {
 		height: 8em;
 	}
 }
-

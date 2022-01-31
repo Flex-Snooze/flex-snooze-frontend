@@ -1,9 +1,8 @@
-import React from 'react';
-import RachelHeadshot from '../../Assets/rachel-headshot.jpeg';
-import GeorgeHeadshot from '../../Assets/george-headshot.jpeg';
+import './About.css';
 import AshleighHeadshot from '../../Assets/ashleigh-headshot.jpg';
 import BillHeadshot from '../../Assets/bill-headshot.jpeg';
-import './About.css'
+import GeorgeHeadshot from '../../Assets/george-headshot.jpeg';
+import RachelHeadshot from '../../Assets/rachel-headshot.jpeg';
 
 function About(props) {
 	return (
@@ -14,10 +13,10 @@ function About(props) {
 				rut, and track your progress as you go!
 				<br />
 				<br />
-				This mobile app was designed to be taken on-the-go, whether to the gym to crush one
-				of our recommended workouts, or out in nature for a trail run. Wherever
-				you workout, Flex Five is your logging buddy to ensure you can easily
-				keep your fitness goals top of mind.
+				This mobile app was designed to be taken on-the-go, whether to the gym
+				to crush one of our recommended workouts, or out in nature for a trail
+				run. Wherever you workout, Flex Five is your logging buddy to ensure you
+				can easily keep your fitness goals top of mind.
 				<br />
 				<br />
 				Flex Five was created by a group of General Assembly students, each with
@@ -41,18 +40,18 @@ function About(props) {
 						/>
 					</a>
 					<h4>George Maganzini</h4>
-                </div>
-                <div className='about__cardRachel'>
-                    <a
-                        className='about__linkedIn'
-                        href='https://www.linkedin.com/in/rachelmagley/'>
-                        <img
-                            className='about__headshot__img'
-                            src={RachelHeadshot}
-                            alt='Rachel'
-                        />
-                    </a>
-                    <h4>Rachel Magley</h4>
+				</div>
+				<div className='about__cardRachel'>
+					<a
+						className='about__linkedIn'
+						href='https://www.linkedin.com/in/rachelmagley/'>
+						<img
+							className='about__headshot__img'
+							src={RachelHeadshot}
+							alt='Rachel'
+						/>
+					</a>
+					<h4>Rachel Magley</h4>
 				</div>
 				<div className='about__cardBill'>
 					<a

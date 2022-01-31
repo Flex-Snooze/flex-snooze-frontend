@@ -2,18 +2,18 @@ import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import { WorkoutContext } from '../src/workoutContext';
 
-import './App.css';
-import Nav from './components/Nav/Nav';
-import Dashboard from './components/Dashboard/Dashboard';
-import TodayWorkout from './components/TodayWorkout/TodayWorkout';
 import About from './components/About/About';
-import SelectWorkout from './components/SelectWorkout/SelectWorkout';
 import CreateWorkout from './components/CreateWorkout/CreateWorkout';
+import Dashboard from './components/Dashboard/Dashboard';
+import Nav from './components/Nav/Nav';
+import SelectWorkout from './components/SelectWorkout/SelectWorkout';
+import TodayWorkout from './components/TodayWorkout/TodayWorkout';
+import './App.css';
 
 function App() {
-	const [todayWorkout, setTodayWorkout] = useState('Push');
-	const [logId, setLogId] = useState(-1);
 	const [finalWorkout, setFinalWorkout] = useState([]);
+	const [logId, setLogId] = useState(-1);
+	const [todayWorkout, setTodayWorkout] = useState('Push');
 	const [userWorkoutData, setUserWorkoutData] = useState([{}]);
 
 	return (

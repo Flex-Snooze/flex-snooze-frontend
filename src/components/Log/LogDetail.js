@@ -27,12 +27,17 @@ function LogDetail(props) {
 			.then(() => {
 				axios
 					.get(`https://flex-five.herokuapp.com/api/log`)
+
 					.then((value) => wait(1000, value))
+
+
 					.then((res) => {
 						setUserWorkoutData(res.data);
 						setLogId(-1);
 					})
+
 					.then((value) => wait(1000, value))
+
 					.then(() => navigate('/mydashboard'));
 			})
 

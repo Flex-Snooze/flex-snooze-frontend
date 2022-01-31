@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+## Project Description 
+Flex Five - a browser-based full stack tool coded in React using JavaScript and CSS, featuring an API managed using MongoDB, Mongoose and Node.js.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This tool was designed for users to log their workouts. This application will recommend an assortment of workouts and specific weight lift moves based on user preference, with the ability to cycle through options. Users are also able to log a custom workout of their choice. This app was designed with mobile first styling as users would most likely leverage the app on-the-go.
 
-## Available Scripts
+Link to the [tool](https://flexfive.netlify.app/).
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation Instructions
+Click on the link to the tool and navigate in your browser window. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Wire Frames
+![Screen Shot 2022-01-30 at 7 29 31 PM](https://user-images.githubusercontent.com/93795090/151724443-fd89f9e2-cd65-4a6d-a513-f0315cec8e49.png)
+![Screen Shot 2022-01-30 at 7 31 59 PM](https://user-images.githubusercontent.com/93795090/151724537-d83366c5-e3b1-4bb7-a9f8-654695fcff9d.png)
+![Screen Shot 2022-01-30 at 7 33 47 PM](https://user-images.githubusercontent.com/93795090/151724612-e18eed2d-6f0e-48ed-9ec4-cb378dbee57e.png)
+![Screen Shot 2022-01-30 at 7 34 39 PM](https://user-images.githubusercontent.com/93795090/151724641-9cfb8f90-36a4-4c6d-8a57-cf5c89f427a2.png)
+![Screen Shot 2022-01-30 at 7 34 59 PM](https://user-images.githubusercontent.com/93795090/151724655-9341054f-01a7-4647-b665-70c52a8bc4f0.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Planning Highlights
+### Initial Stage
+First step involved prototyping front-end layout. This included Prototype Wireframe sketches for App Layout, Front-End React,Component Structure and  Back-End API Structure Endpoints and Directory Naming Convention.
 
-### `npm run build`
+The sketches component structure and backend structure were shared and discussed in a team meeting. The team collaborated and edited some of the vision’s of the app’s design as a team. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app had a initial vision of containing a calendar that would organize and display data to the user. This idea was refactored because the integration of a front end calendar with a back end MongoDB had a high chance of delaying the production of the application within the 6 day deadline.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The basic functionality of the app did not differ much from the planning stages the look and layout of the app was adapted more to more simplistic mobile-first approach. Which increases usability of the app in a gym setting.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### During Development 
+The app’s development lead to a mobile first layout and design. The calendar approach was abandoned and a simple more user friendly for the app’s functionality. A  custom workout button and form was integrated, so the user can have the freedom of adding a custom workout to the log. The information is saved for the user to have access to the log in the dashboard screen at any time.
+Delete functionality was added to LogHeader so user can remove undesired workouts.
 
-### `npm run eject`
+## MVP - User Stories
+As a user, I would like a workout personally recommended to me
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+As a user, I would like to be able to skip certain workouts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+As a user, I would like to be able to delete certain workouts from the collection
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+As a user, I would like a log of my completed workouts
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Stetch goals - User Stories
+As a user, I would like to be able to add my custom workouts
 
-## Learn More
+As a user, I would like my workouts to be logged on a calendar
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As a user, I would like to be able to flexibly "snooze" types of workouts or exercises for periods of my choosing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+As a user I would like to establish a goal weight, see my current weight, and see my progression
 
-### Code Splitting
+As a user I would like the app to track how many calories I burned per session
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Open Issues & Challenges

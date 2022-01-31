@@ -13,10 +13,9 @@ function CreateWorkout(props) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		console.log(formState);
 
 		axios
-			.post('https://flex-five.herokuapp.com/api/user/5', {
+			.post('https://flex-five.herokuapp.com/api/log', {
 				...formState,
 				date: new Date().toDateString().slice(4, 10),
 			})
@@ -48,8 +47,9 @@ function CreateWorkout(props) {
 					id='name'
 					onChange={handleChange}
 					value={formState.name}
+					placeholder='Mountain Climbers'
 				/>
-				<br />
+
 				<label htmlFor='date'> Date Completed:</label>
 				<input
 					type='date'
@@ -57,10 +57,10 @@ function CreateWorkout(props) {
 					onChange={handleChange}
 					value={formState.date}
 				/>
-				<br />
 
 				<label htmlFor='exercises'>Workout Notes:</label>
 				<textarea
+					placeholder='Notes'
 					id='exercises'
 					cols='40'
 					rows='10'

@@ -1,9 +1,9 @@
-import './TodayWorkout.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { WorkoutContext } from '../../workoutContext';
 import axios from 'axios';
+import './TodayWorkout.css';
 
 function TodayWorkout(props) {
 	const { setFinalWorkout, setTodayWorkout } = useContext(WorkoutContext);

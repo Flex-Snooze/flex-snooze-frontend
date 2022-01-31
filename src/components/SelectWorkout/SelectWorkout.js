@@ -1,9 +1,8 @@
-import './SelectWorkout.css';
 import React from 'react';
 import { useContext, useEffect, useState } from 'react';
 import { WorkoutContext } from '../../workoutContext';
-import axios from 'axios';
 import { Navigate } from 'react-router-dom';
+import axios from 'axios';
 
 function SelectWorkout(props) {
 	const { todayWorkout, finalWorkout, setFinalWorkout } =

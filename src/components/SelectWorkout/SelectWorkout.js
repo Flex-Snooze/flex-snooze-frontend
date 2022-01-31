@@ -95,7 +95,7 @@ function SelectWorkout(props) {
 			date: new Date().toDateString().slice(4, 10),
 		};
 		axios
-			.post('https://flex-five.herokuapp.com/api/user/5', workoutData)
+			.post('https://flex-five.herokuapp.com/api/log', workoutData)
 			.then((response) => {
 				setToDashboard(true);
 			})

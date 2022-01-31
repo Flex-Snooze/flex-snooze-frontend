@@ -1,42 +1,83 @@
 .about__div {
-    margin-top: 0;
-    height: 60vh;
-    width: 100vw;
+	margin-top: 0;
+	height: 60vh;
+	width: 100vw;
 }
 
 .about__p {
-    font-size: .8em;
-    padding-top: 0;
+	font-size: 0.8em;
+	padding-top: 0;
 
-    overflow-y: scroll;
+	overflow-y: scroll;
 }
 h3 {
-    color: rgb(29, 124, 148)
+
+	color: rgb(29, 124, 148);
+
 }
 
-
 .about__cardContainer {
-    display: grid;
-    height: 40vh;
-    grid-template-areas: "a b" "c d";
-    overflow-y: scroll;
+	display: grid;
+	height: 40vh;
+	grid-template-areas: 'a b' 'c d';
+	overflow-y: scroll;
 }
 
 .about__cardGeorge {
-    grid-area: 'a';
-
+	grid-area: 'a';
 }
 .about__cardRachel {
-    grid-area: 'b';
+	grid-area: 'b';
 }
 .about__cardBill {
-    grid-area: 'c';
+	grid-area: 'c';
 }
 .about__cardAshleigh {
-    grid-area: 'd';
+	grid-area: 'd';
 }
 
 img {
-    height: 8em;
-
+	height: 8em;
 }
+
+@media only screen and (min-width: 390px) {
+	.about__p {
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.about__p {
+		font-size: large;
+		overflow: auto;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.about__p {
+		font-size: x-large;
+		overflow: auto;
+	}
+	.about__cardContainer {
+		display: grid;
+		height: 40vh;
+		grid-template-areas: 'a b c d';
+		overflow-y: scroll;
+	}
+	.about__cardGeorge {
+		grid-area: 'a';
+	}
+	.about__cardRachel {
+		grid-area: 'b';
+	}
+	.about__cardBill {
+		grid-area: 'c';
+	}
+	.about__cardAshleigh {
+		grid-area: 'd';
+	}
+
+	img {
+		height: 8em;
+	}
+}
+

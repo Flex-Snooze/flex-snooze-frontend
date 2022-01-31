@@ -11,7 +11,9 @@
 	overflow-y: scroll;
 }
 h3 {
+
 	color: rgb(29, 124, 148);
+
 }
 
 .about__cardContainer {
@@ -78,3 +80,4 @@ img {
 		height: 8em;
 	}
 }
+

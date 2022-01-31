@@ -17,7 +17,7 @@ h1 {
 	font-family: 'Rock Salt', cursive;
 	text-align: center;
 	text-shadow: 0.06em 0.06em 0.06em rgba(0, 0, 0, 0.35);
-	color: rgb(203, 193, 181);
+	color: rgb(235, 229, 229);
 	background-color: rgb(29, 124, 148);
 }
 
@@ -42,3 +42,5 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
+
+/* rgb(202, 191, 178); */

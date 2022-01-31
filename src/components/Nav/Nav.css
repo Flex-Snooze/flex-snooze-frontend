@@ -25,6 +25,6 @@ nav {
 
 .nav__li:hover {
 	text-shadow: 0 0 2em rgba(255, 255, 255, 1);
-	color: #585353;
+	color: #666161;
 	border-color: #ffffff;
 }

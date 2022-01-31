@@ -13,7 +13,6 @@ function CreateWorkout(props) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		console.log(formState);
 
 		axios
 			.post('https://flex-five.herokuapp.com/api/log', {

@@ -6,6 +6,7 @@ import GeorgeHeadshot from '../../Assets/george-headshot.png';
 import RachelHeadshot from '../../Assets/rachel-headshot.jpeg';
 import './About.css';
 
+
 function About(props) {
 	return (
 		<div className='about__div'>

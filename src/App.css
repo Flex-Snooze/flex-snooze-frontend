@@ -44,3 +44,12 @@ h1 {
 }
 
 /* rgb(202, 191, 178); */
+
+@media only screen and (min-width: 600px) {
+  .App {
+	background-position: bottom;
+  }
+  .todayWorkoutSelection {
+	margin: 0 auto;
+}
+}
